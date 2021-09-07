@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8EF743C26E755B200271280 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EF743B26E755B200271280 /* CloudKit.framework */; };
 		D8FA8B6826E5730800D5BC4C /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FA8B6726E5730800D5BC4C /* UltimatePortfolioApp.swift */; };
 		D8FA8B6A26E5730800D5BC4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FA8B6926E5730800D5BC4C /* ContentView.swift */; };
 		D8FA8B6C26E5730E00D5BC4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FA8B6B26E5730E00D5BC4C /* Assets.xcassets */; };
 		D8FA8B6F26E5730E00D5BC4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FA8B6E26E5730E00D5BC4C /* Preview Assets.xcassets */; };
 		D8FA8B7826E578DC00D5BC4C /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8FA8B7626E578DC00D5BC4C /* Main.xcdatamodeld */; };
+		D8FA8B7A26E5861500D5BC4C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FA8B7926E5861500D5BC4C /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8EF743926E7552C00271280 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
+		D8EF743B26E755B200271280 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D8FA8B6426E5730800D5BC4C /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FA8B6726E5730800D5BC4C /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		D8FA8B6926E5730800D5BC4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +26,7 @@
 		D8FA8B6E26E5730E00D5BC4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8FA8B7026E5730E00D5BC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8FA8B7726E578DC00D5BC4C /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		D8FA8B7926E5861500D5BC4C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EF743C26E755B200271280 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8EF743A26E755B200271280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8EF743B26E755B200271280 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8FA8B5B26E5730800D5BC4C = {
 			isa = PBXGroup;
 			children = (
 				D8FA8B6626E5730800D5BC4C /* UltimatePortfolio */,
 				D8FA8B6526E5730800D5BC4C /* Products */,
+				D8EF743A26E755B200271280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,8 +69,10 @@
 		D8FA8B6626E5730800D5BC4C /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				D8EF743926E7552C00271280 /* UltimatePortfolio.entitlements */,
 				D8FA8B6726E5730800D5BC4C /* UltimatePortfolioApp.swift */,
 				D8FA8B7626E578DC00D5BC4C /* Main.xcdatamodeld */,
+				D8FA8B7926E5861500D5BC4C /* DataController.swift */,
 				D8FA8B6926E5730800D5BC4C /* ContentView.swift */,
 				D8FA8B6B26E5730E00D5BC4C /* Assets.xcassets */,
 				D8FA8B7026E5730E00D5BC4C /* Info.plist */,
@@ -142,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8FA8B7826E578DC00D5BC4C /* Main.xcdatamodeld in Sources */,
+				D8FA8B7A26E5861500D5BC4C /* DataController.swift in Sources */,
 				D8FA8B6A26E5730800D5BC4C /* ContentView.swift in Sources */,
 				D8FA8B6826E5730800D5BC4C /* UltimatePortfolioApp.swift in Sources */,
 			);
@@ -271,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UltimatePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = Z4688Y75NN;
@@ -293,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UltimatePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = Z4688Y75NN;
