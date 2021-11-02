@@ -8,36 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var numbers = [Int]()
-    @State private var currentNumber = 1
+    //Update data here when it is changed in the class
+    @ObservedObject var expenses = Expenses()
+    
+    @State private var showingAddExpense = false
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(numbers, id: \.self) {
-                        Text("\($0)")
-                    }
-                    .onDelete(perform: removeRows)
+            List {
+                ForEach(expenses.items) { item in
+                    Text(item.name)
                 }
-                
-                Button("Add number") {
-                    self.numbers.append(currentNumber)
-                    self.currentNumber += 1
-                }
+                .onDelete(perform: removeItems)
             }
-            .navigationBarItems(leading: EditButton())
+            .navigationBarTitle("iExpense")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showingAddExpense = true
+                }) {
+                    Image(systemName: "plus")
+                }
+            )
+        }
+        .sheet(isPresented: $showingAddExpense) {
+            AddView(expenses: self.expenses)
         }
     }
     
-    func removeRows(at offsets: IndexSet) {
-        numbers.remove(atOffsets: offsets)
+    func removeItems(at offsets: IndexSet) {
+        expenses.items.remove(atOffsets: offsets)
     }
+}
+
+struct ExpenseItem: Identifiable {
+    let id = UUID()
+    let name: String
+    let type: String
+    let amount: Int
+}
+
+class Expenses: ObservableObject {
+    //Notify container for class that this var changed
+    @Published var items = [ExpenseItem]()
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AddView(expenses: Expenses())
     }
 }
